@@ -2,12 +2,12 @@ using AppCopaHAS.ViewModels.Jogos;
 
 namespace AppCopaHAS.Views.Jogos;
 
-public partial class CadastroJogo : ContentPage
+public partial class CadastroJogoView : ContentPage
 {
 	JogoViewModel viewModel;
-	public CadastroJogo()
+	public CadastroJogoView()
 	{
-		InitializeComponent();
+        InitializeComponent();
 
 		viewModel = new JogoViewModel();
 		BindingContext = viewModel;

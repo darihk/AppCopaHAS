@@ -25,6 +25,4 @@ namespace AppCopaHAS.Services
             return lista;
         }
     }
-    {
-    }
 }

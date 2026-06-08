@@ -77,6 +77,5 @@ namespace AppCopaHAS.Services
             else
                 throw new Exception(serialized);
         }
-
     }
 }
