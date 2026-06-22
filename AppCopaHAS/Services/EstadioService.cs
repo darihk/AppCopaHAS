@@ -1,4 +1,4 @@
-﻿using AppCopaHAS.Models;
+﻿using CopaHAS.Models;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -19,10 +19,13 @@ namespace AppCopaHAS.Services
         public async Task<ObservableCollection<Estadio>> GetEstadiosAsync()
         {
             string urlComplementar = string.Format("{0}", "/GetAll");
-
-            ObservableCollection<Estadio> lista = await _request.GetAsync<ObservableCollection<Estadio>>(_apiUrlBase + urlComplementar, string.Empty);
-
+            
+            ObservableCollection<Estadio> lista = 
+                await _request.GetAsync<ObservableCollection<Estadio>>(_apiUrlBase + urlComplementar, string.Empty);
+            
             return lista;
         }
     }
 }
+
+

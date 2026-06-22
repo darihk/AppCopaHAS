@@ -1,12 +1,14 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace AppCopaHAS.Models
+namespace CopaHAS.Models
 {
+    //Classe Selecao
     public class Selecao
     {
         public int Id { get; set; }
-        public string Pais { get; set; } = string.Empty;
+        public string Pais { get; set; } = string.Empty;        
     }
 }

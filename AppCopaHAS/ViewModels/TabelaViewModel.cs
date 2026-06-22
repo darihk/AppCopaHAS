@@ -9,25 +9,30 @@ namespace AppCopaHAS.ViewModels
 {
     public class TabelaViewModel : BaseViewModel
     {
+
         JogoService _jogoService;
         public ObservableCollection<JogoDTO> Jogos { get; set; }
         public TabelaViewModel()
         {
             _jogoService = new JogoService();
             Jogos = new ObservableCollection<JogoDTO>();
-        }
 
+            _ = ObterJogos();
+        }
         public async Task ObterJogos()
         {
-            try
+            try 
             {
                 Jogos = await _jogoService.GetJogosDTOAsync();
-                OnPropertyChanged(nameof(Jogos));
+                OnPropertyChanged(nameof(Jogos));  
             }
             catch (Exception ex)
-            {
-                await Application.Current.MainPage.DisplayAlert("Ops", ex.Message, "Detalhes" + ex.InnerException, "Ok");
+            {                
+                await Application.Current.MainPage
+                    .DisplayAlertAsync("Ops", ex.Message, "Detalhes" + ex.InnerException, "Ok");
             }
         }
+
+
     }
 }

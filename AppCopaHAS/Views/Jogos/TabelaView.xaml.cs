@@ -6,17 +6,21 @@ public partial class TabelaView : ContentPage
 {
 	TabelaViewModel viewModel;
 	public TabelaView()
-	{
+	{	
 		InitializeComponent();
 
-        viewModel = new TabelaViewModel();
+		viewModel = new TabelaViewModel();
 		BindingContext = viewModel;
 		Title = "Tabela";
-    }
-
+	}
     protected override void OnAppearing()
     {
         base.OnAppearing();
-        _ = viewModel.ObterJogos();
+		_ = viewModel.ObterJogos();
     }
 }
+
+
+
+
+

@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace AppCopaHAS.Models
+namespace CopaHAS.Models
 {
     //Classe Jogo
     public class Jogo
@@ -13,3 +14,4 @@ namespace AppCopaHAS.Models
         public List<JogoSelecao> JogoSelecoes { get; set; } = new List<JogoSelecao>();
     }
 }
+

@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace AppCopaHAS.Models
+namespace CopaHAS.Models
 {
     //Classe Estadio
     public class Estadio
@@ -10,6 +11,6 @@ namespace AppCopaHAS.Models
         public int Id { get; set; }
         public string Nome { get; set; } = string.Empty;
         public string Cidade { get; set; } = string.Empty;
-        public decimal Capacidade { get; set; }
+        public decimal Capacidade { get; set; }        
     }
 }

@@ -6,31 +6,29 @@
     <ScrollView>
         <VerticalStackLayout Spacing="3" Padding="15">
             <Label Text="Data" FontSize="Medium" />
-            <DatePicker Date="{Binding DataSelecionada}"/>
-            
-            <Label Text="Hora" FontSize="Medium" />
-            <TimePicker Time="{Binding HoraSelecionada}"/>
+            <DatePicker Date="{Binding DataSelecionada}" />
 
-            <Label Text="{Binding DataHora}" />
+            <Label Text="Hora" FontSize="Medium" />
+            <TimePicker Time="{Binding HoraSelecionada}" />
+
+            <Label Text="{Binding DataHora}" /><!--Apenas para apresentar os dados selecionados-->
 
             <Picker Title="---Estádio---" SelectedItem="{Binding EstadioSelecionado}" ItemsSource="{Binding Estadios}" ItemDisplayBinding="{Binding Nome}" />
-            
+
             <HorizontalStackLayout>
-                <Picker Title="---Seleção 1---" SelectedItem="{Binding Selecao1}" ItemsSource="{Binding Selecoes}"
-ItemDisplayBinding="{Binding Pais}" />
+                <Picker Title="---Seleção 1---" SelectedItem="{Binding Selecao1}"  ItemsSource="{Binding Selecoes}" ItemDisplayBinding="{Binding Pais}" />
                 <Entry Text="{Binding GolsSelecao1}" FontSize="Medium" Keyboard="Numeric"/>
             </HorizontalStackLayout>
-            
+
             <HorizontalStackLayout>
-                <Picker Title="---Seleção 2---" SelectedItem="{Binding Selecao2}" ItemsSource="{Binding Selecoes}"
-ItemDisplayBinding="{Binding Pais}" />
+                <Picker Title="---Seleção 2---" SelectedItem="{Binding Selecao2}"  ItemsSource="{Binding Selecoes}" ItemDisplayBinding="{Binding Pais}" />
                 <Entry Text="{Binding GolsSelecao2}" FontSize="Medium" Keyboard="Numeric"/>
             </HorizontalStackLayout>
-            
+
             <HorizontalStackLayout Spacing="20">
                 <Button Text="Salvar" Command="{Binding SalvarCommand}"></Button>
             </HorizontalStackLayout>
-            
         </VerticalStackLayout>
     </ScrollView>
+
 </ContentPage>

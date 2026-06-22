@@ -1,15 +1,16 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using System.Threading.Tasks;
 
-namespace AppCopaHAS.Models
+namespace CopaHAS.Models
 {
     //Classe JogoSelecao
     public class JogoSelecao
     {
         public int JogoId { get; set; }
         public int SelecaoId { get; set; }
-        public int Gols { get; set; }
-        public int GolsDecisaoPenaltis { get; set; }
+        public int Gols { get; set; }        
+        public int GolsDecisaoPenaltis { get; set; }        
     }
 }
